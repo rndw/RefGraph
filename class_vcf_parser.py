@@ -1,0 +1,281 @@
+from os import listdir
+
+class Vcft():
+
+    '''
+    DEV UTILITIES. NOT REQUIRED.
+    INPUT: LIST OF LISTS/TUPLEs
+    '''
+
+    def __init__(self,data):
+        self.data = data
+
+    def list_positions(self):
+        return [_[1] for _ in self.data]
+
+    def list_refs(self):
+        return [_[2] for _ in self.data]
+
+    def list_alts(self):
+        return [_[3] for _ in self.data]
+
+
+
+class ReadVcfs():
+
+    '''
+    PRIMARY DICTIONARY OBJECT CONSTRUCTOR. LINKS FILE TO SPECIFIC DICT KEY. WHERE DICT KEY = FILENAME
+    INPUT: PATH TO VCFs
+    OUTPUT: DICTIONARY, (FILENAME AND SAMPLE) - REQUIRED DOWNSTREAM
+    '''
+
+    def __init__(self,path):
+        self.path = path
+
+    def variant_builder(self):
+        '''
+
+        :return:
+        '''
+        vcfdata = {}
+        filename = ''
+        sample = ''
+
+        for file in [_ for _ in listdir(self.path) if _.endswith('.vcf')]:
+
+            filename = file
+            sample = filename.split(sep='.')[0]
+
+            print(f'Adding variants from: {filename}\n')
+            vcfdata[sample] = VariantList(self.path, filename, sample)
+
+        return vcfdata
+
+
+
+class VariantList():
+    '''
+    MAIN CLASS. READS THE VCF FILES INTO DICT OBJECT VALUES. INHERIT FROM VARIANT_BUILDER.
+    INPUT: PATH, (FILENAME AND SAMPLE) - CREATED BY VARIANT_BUILDER
+    OUTPUT: DICTIONARY KEY:VALUE PAIR - RAW DATA OBJECT
+
+    IMPROVEMENTS: THIS FUNCTION SHOULD BE MERGED/INHERITED FROM VARIANT_BUILDER
+    '''
+
+    def __init__(self,path,filename,sample):
+        self.path = path
+        self.filename = filename
+        self.sample = sample
+
+
+    def vcf_reader(self):
+        '''
+
+        :return:
+        '''
+
+        vals_vcf = ((self.path),(self.sample))
+        varnum = ''
+
+        with open(self.path+self.filename, 'r') as f:
+
+            print(f'Reading in variants from {self.filename}')
+
+            for line in f:
+
+                varnum = line.split(sep='\t')[1:2]
+
+                if line.startswith('#'):
+
+                    continue
+
+                else:
+
+                    line_input = ((line.split(sep='\t')[:2] + line.split(sep='\t')[3:5]),)
+                    vals_vcf = vals_vcf + ((line.split(sep='\t')[:2] + line.split(sep='\t')[3:5]),)
+
+            return vals_vcf
+
+
+    def number_of_variants(self):
+        #UTILITY - NOT REQUIRED
+        #RETURNS THE NUMBER OF VARIANTS IN A VCF
+
+        numberofvariants = len(self.vcf_reader()) - 2
+        return numberofvariants
+
+
+    def inspect_varaint(self,num):
+        #UTILITY - NOT REQUIRED
+        #OUTPUTS A SPECIFIC VARIANT
+
+        self.num = num
+
+        try:
+
+            return self.vcf_reader()[num+1]
+
+        except IndexError:
+
+            print(f'{self.num} not in range. Number of variants {self.number_of_variants()}')
+
+    #UTILITIES - NOT REQUIRED
+    def list_positions(self):
+        return [_[:2] for _ in self.vcf_reader()[2:]]
+
+
+    def list_refs(self):
+        return [_[2] for _ in self.vcf_reader()[2:]]
+
+
+    def list_alts(self):
+        return [_[3] for _ in self.vcf_reader()[2:]]
+
+
+
+class VarGraphCons():
+    '''
+    PRIMARY GRAPH STRUCTURAL CONSTRUCTOR. ADDS ANCHOR POINTS WHICH DEFINE FINAL GRAPH LAYOUT
+    SEE ANNOTATION BELOW
+    INPUT: DICTIONARY OBJECT AS CREATED BY VARIANT_BUILDER + VARIANTLIST/VCF_READER
+    OUTPUT: DICTIONARY AS ABOVE, BUT WITH ANCHOR POINTS INCLUDED
+    '''
+
+    def __init__(self):
+        pass
+
+
+    def anchor_builder(self,dat):
+        '''
+        #ADDS ANCHORS TO VARIANT OBJECTS
+        :param dat:
+        :return:
+        '''
+        self.dat = dat
+        anchor_string = []
+        graphdb = {}
+
+        for key in list(dat.keys()):  #This function adds REFERENCE anchors - allowing merging back to reference positions
+
+            data = dat[key].vcf_reader()
+            chromosomes = list(set([_[0] for _ in data[2:]]))  #Need to split into chromosomes to add anchors. Could pull chr lengths in from gff? ESSENTIAL TO ADD EXTREME LIMIT ANCHORS.
+            print('Finished')
+            rebuild_genome = ()
+
+            for i in chromosomes: #ADD ANCHORS PER CHROMOSOME. IDENTIFIES NON-CONSECUTIVE VARIANTS AND ADDS REFERENCE POSITIONS TO MERGE PATHS
+
+                temp = [tuple((_), ) for _ in data[2:] if _[0] == i]  # split per chromosome - needed to add anchors
+                temp = (tuple([temp[0][0], str(int(temp[0][1]) - 1), ' ', 'REF'], ),) + tuple(temp)  # add chr start anchor
+                temp = tuple(temp) + (tuple([temp[len(temp) - 1][0], str(int(temp[len(temp) - 1][1]) + 1), ' ','REF']),)  # add chr end anchor
+                anchors = ()
+
+                for k in range(1, len(temp) - 1):
+                    if int(temp[k][1]) + 1 != int(temp[k + 1][1]) and int(temp[k][1]) - 1 != int(temp[k - 1][1]):
+                        anchor_string = tuple([temp[k][0], str(int(temp[k][1]) - 1), ' ', 'REF'])
+                        anchors = tuple(anchors) + (((anchor_string)),)
+
+
+                anchors = tuple(anchors) + tuple(temp)
+                anchors = sorted(anchors)
+                rebuild_genome = tuple(rebuild_genome) + tuple(anchors)
+
+                with open(str(key + '_' + 'graph_anchors'), 'w') as f:  # write to file as backup
+
+                    for i in range(0, len(rebuild_genome) - 1):
+
+                        f.write(str(''.join(
+                            f'{rebuild_genome[i][0]}\t{rebuild_genome[i][1]}\t{rebuild_genome[i][2]}\t{rebuild_genome[i][3]}\n')))  # convert tuple to string and write to file
+
+            graphdb[key] = rebuild_genome
+
+        return graphdb
+
+
+class RegionOfInterestGraph():
+    '''
+    LIMIT FINAL(GRAPH.DOT) OUTPUT TO SPECIFIED RANGE. DOES ERROR CHECKING OF THE RANGE PARAMS
+    INPUT: LOCI. OBJECT CREATED BY DEFAULT FROM CMD ARGS
+    OUTPUT: RANGE LIMITED REFERENCE PATHWAY
+    '''
+
+    def __init__(self, output, loci):
+        self.output = output
+        self.loci = loci
+
+
+    def region(self):
+        '''
+        #QC FUNCTION
+        #IN SHORT; CHECK IF USER INPUT IS LOGICAL. IF NOT, CORRECT. IF MODIFICATION BREAKS LOGIC, CHANGE TO COMPLY.
+        #IF STILL OUT OF RANGE, DEFAULT TO RAW DATA LIMITS
+        #CHECK IF LOGIC HOLDS (EX. DO WE GO INTO NEGATVIE VALS) - NOT REQUIRED BUT UGLY IF NOT CHECKED
+        #PRINT OUT MODIFICATIONS TO USER
+        :return:
+        '''
+
+
+        rangebreak = 0
+
+        for key in list(self.output.keys()):
+
+            if int(max(self.output[key], key=lambda x: int(x[1]))[1]) > rangebreak:
+
+                rangebreak = int(max(self.output[key], key=lambda x: int(x[1]))[1])
+
+            if rangebreak < int(self.loci[1]):
+
+                print(f'Region of interest start ({self.loci[1]}) larger than variant input ({rangebreak}).')
+                print(f'Modifying range parameters from: {self.loci[0]}":"{self.loci[1]}"-"{self.loci[2]}')
+
+                if int(rangebreak) > 5000:
+
+                    self.loci[1] = int(rangebreak) - 5000 # Hardcoding. NEED TO FIX
+                    self.loci[2] = rangebreak
+
+                else:
+
+                    self.loci[1] = 0
+                    self.loci[2] = rangebreak
+
+                print(f'To new range: {self.loci[0]}":"{self.loci[1]}"-"{self.loci[2]}')
+
+        print(self.loci)
+
+        if self.loci[0] == "DEFAULT":
+            print(f"Using first chromosome element in graph data: {self.output[list(self.output.keys())[1]][0][0]}")
+            self.loci[0] = self.output[list(self.output.keys())[1]][0][0]
+        if self.loci[0] != "DEFAULT" and self.loci[0] in set([_[0] for _ in list(self.output.values())[0]]):
+            print(f'Limiting graph area to: {self.loci}')
+        else:
+            print(f'Supplied chromosome not in any vcf: {self.loci[0]}\nAvailable options are: {set([_[0] for _ in list(self.output.values())[0]])}\nDefaulting to first element: {self.output[list(self.output.keys())[1]][0][0]}')
+
+            self.loci[0] = self.output[list(self.output.keys())[1]][0][0]
+            print(self.loci)
+
+
+    def referencegr(self):
+        '''
+        #INPUT: OUTPUT FROM DICT KEY:VALUE (+ANCHOR) PAIRS
+        #OUTPUT: RANGE LIMITED REFERENCE PATH OBJECT
+        #IMPROVEMENTS: CREATE SAME FOR VARIANT PATHS - DONE LATER DURING DOT FILE CONSTRUCTION
+        :return:
+        '''
+
+
+        refpath = ()
+        buildfullref = ()
+
+        for key in self.output:  # Create a merged reference path
+
+            for i in self.output[key]:
+
+                if i[3] == 'REF' and i[0] == self.loci[0] and int(i[1]) >= int(self.loci[1]) and int(i[1]) <= int(self.loci[2]):
+                    refpath = tuple(refpath) + (([i[0], i[1], i[3]]),)
+
+                if i[3] != "REF" and i[0] == self.loci[0] and int(i[1]) >= self.loci[1] and int(i[1]) <= self.loci[2]:
+                    refpath = tuple(refpath) + (([i[0], i[1], 'REF']),)
+
+            refpath = sorted(tuple(set(tuple(_) for _ in refpath))) # Get rid of duplicated nodes. Then convert back to tuple for indexing
+            refpath = sorted(refpath, key=lambda x: int(x[1]))
+
+        return refpath
