@@ -12,7 +12,7 @@ class RefGraphBuilder():
     def __init__(self):
         pass
 
-    def referencepath(self,refpath):
+    def referencepath(self, refpath):
         '''
 
         :param refpath:
@@ -22,7 +22,7 @@ class RefGraphBuilder():
 
         #CONSTRUCT BASE GRAPH ATTRIBUTES
         #COLOUR SET TO GREY/BLACK - HARD CODED
-        p = Digraph(name='REFERENCE', node_attr={'shape': 'box', 'color': 'black', 'fillcolor': 'grey'}, format='png',graph_attr={'splines': 'spline', 'rankdir': 'LR'},edge_attr={'arrowhead': 'vee', 'arrowsize': '0.5', 'color': 'black'})
+        p = Digraph(name='REFERENCE', node_attr={'shape': 'box', 'color': 'black', 'fillcolor': 'grey'}, format='png', graph_attr={'splines': 'spline', 'rankdir': 'LR'}, edge_attr={'arrowhead': 'vee', 'arrowsize': '0.5', 'color': 'black'})
         p.graph_attr['rankdir'] = 'LR'
 
         for i in range(1, len(self.refpath) - 1):  # Has to start at one, else loopback in graph
@@ -47,7 +47,7 @@ class RefGraphBuilder():
 
         return p
 
-    def variantpath(self, output,graph,loci):
+    def variantpath(self, output, graph, loci):
         '''
         #SAME AS REFERENCE PATH. ADDITIONALLY, REQUIRES LOCI RANGE SPECIFICATION OBJECT TO LIMIT GRAPHS
         :param output:
@@ -58,7 +58,7 @@ class RefGraphBuilder():
 
         self.output = output
         self.graph = graph
-        self.loci =loci
+        self.loci = loci
 
         #COLOURBLIND PALETTE CONSTRUCTED. DESATURATED.
         colour = sns.color_palette("colorblind", desat=.5) + sns.color_palette("Set1", n_colors=8, desat=.5)
@@ -82,7 +82,7 @@ class RefGraphBuilder():
             #THIS IS A MAJOR CONCERN - NEEDS ATTENTION.
             #COULD USE SET.SEED AND BUILD SCHEME WITH MAXIMAL DIVERGENCE
             #PRE-ALLOCATE COLOUR SCHEME AND CHECK IF OVERLAP, IF OVERLAP, PRODUCE NEW SCHEME, ELSE, BREAK AND LIMIT SAMPLES?
-            x = Digraph(name=key, node_attr={'shape': 'box', 'color': colour[randint(0, len(colour) - 1)],'fillcolor': colour[randint(0, len(colour) - 1)]},edge_attr={'arrowhead': 'vee', 'arrowsize': '0.5', 'color': colour[randint(0, len(colour) - 1)]})  # colour can also be set to use x11 names 'red'
+            x = Digraph(name=key, node_attr={'shape': 'box', 'color': colour[randint(0, len(colour) - 1)], 'fillcolor': colour[randint(0, len(colour) - 1)]}, edge_attr={'arrowhead': 'vee', 'arrowsize': '0.5', 'color': colour[randint(0, len(colour) - 1)]})  # colour can also be set to use x11 names 'red'
             x.graph_attr['rankdir'] = 'LR'
 
             for i in range(1, len(varpath) - 1):
@@ -93,7 +93,7 @@ class RefGraphBuilder():
 
             x.node(varpath[len(varpath) - 1][1] + varpath[len(varpath) - 1][2], label=str(varpath[len(varpath) - 1][0] +':' + varpath[len(varpath) - 1][1] +' ' + varpath[len(varpath) - 1][2]))
             x.node(varpath[len(varpath) - 2][1] + varpath[len(varpath) - 2][2], label=str(varpath[len(varpath) - 2][0] +':' + varpath[len(varpath) - 2][1] +' ' + varpath[len(varpath) - 2][2]))
-            x.edge(varpath[len(varpath) - 2][1] + varpath[len(varpath) - 2][2],varpath[len(varpath) - 1][1] + varpath[len(varpath) - 1][2])
+            x.edge(varpath[len(varpath) - 2][1] + varpath[len(varpath) - 2][2], varpath[len(varpath) - 1][1] + varpath[len(varpath) - 1][2])
 
             x.node(str(key), label=str(key))
             x.node(str(key + '_'), label=str('Path'))

@@ -43,20 +43,21 @@
 #python3 Driver_dyedot.py -p /home/rndw/PycharmProjects/graph_dag/Yeast_data/Full_vcfs -o output -c chrVII -b 6000 -e 100000
 ###############################################
 
-import argparse
-from class_vcf_parser import VariantList, ReadVcfs, VarGraphCons, RegionOfInterestGraph, Vcft
-from class_Grapher import RefGraphBuilder
 from os import name
 from time import time
+import argparse
+from class_vcf_parser import ReadVcfs, VarGraphCons, RegionOfInterestGraph
+from class_Grapher import RefGraphBuilder
+
 
 
 #PARSER FOR CMD ARGUMENTS
-parser = argparse.ArgumentParser(description='Read in vcf files and constructs a variations graph', prog = 'DyeDot')
+parser = argparse.ArgumentParser(description='Read in vcf files and constructs a variations graph', prog='DyeDot')
 parser.add_argument('-p', metavar='<path>', type=str, help="Path to vcf files")
 parser.add_argument('-o', type=str, metavar='<filename>', help="Output filename")
 parser.add_argument('-c', type=str, metavar='chromosome', nargs='?', default='DEFAULT', const='DEFAULT', help='Chromosome to investigate (default: First element in graph dictionary)')
 parser.add_argument('-b', type=int, metavar='integer', nargs='?', default=0, const=0, help='Start location of region to investigate (default: 0 bp)')
-parser.add_argument('-e', type=int,metavar='integer', nargs='?', default=50000, const=50000, help='End location of region to investigate (default: 50 000 bp)')
+parser.add_argument('-e', type=int, metavar='integer', nargs='?', default=50000, const=50000, help='End location of region to investigate (default: 50 000 bp)')
 args = parser.parse_args()
 
 #FRIENDLY CMD ARGUMENT CORRECTION/WARNING/NOTIFICATIONS
@@ -72,14 +73,14 @@ if name == 'posix' and not path.endswith('/'):
     path = path + '/'
     print(f'Path set to: {path}')
 if name != 'posix' and not path.endswith('\\'):
-    path= path + '\\'
+    path = path + '\\'
     print(f'Path set to: {path}')
 #CONSTRUCT RANGE OBJECT
 loci = [args.c, args.b, args.e]
 #CREATE A DICTIONARY OBJECT LINKING EACH KEY TO A VCF
 dat = ReadVcfs(path).variant_builder()
 #EXIT IF THE DIR CONTAINS NO VCFs
-if len(dat) == 0:
+if not dat:
     print(f"No vcf files in directory. Please check path: {path}")
     exit(1)
 
@@ -87,7 +88,8 @@ if len(dat) == 0:
 start = time()
 
 #READ IN VCF FILES AS A DICT - EACH VARIANT IS A TUPLE(CHR, POS, ALT, REF) PER VCF/KEY
-output = VarGraphCons().anchor_builder(dat)
+## -- Saving intermediate files in same dir as vcfs
+output = VarGraphCons(path).anchor_builder(dat)
 #LIMIT DATA TO SPECIFIED REGION
 #IMPROVEMENT: OUTPUT MULTIPLE RANGES OR BLOCKS
 RegionOfInterestGraph(output, loci).region()
@@ -97,7 +99,7 @@ refpath = RegionOfInterestGraph(output, loci).referencegr()
 #CONSTRUCT THE REFERENCE PATH
 graph = RefGraphBuilder().referencepath(refpath)
 #CONSTRUCT THE VARAINT PATHS: BUILT ON TOP OF THE REFERENCE PATH
-xgraph = RefGraphBuilder().variantpath(output,graph,loci)
+xgraph = RefGraphBuilder().variantpath(output, graph, loci)
 
 #ANOTHER FRIENDLY MESSAGE - OUTPUT FILE
 print(f'Writing output to: {str(args.o+".dot")}')
