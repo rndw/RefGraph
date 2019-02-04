@@ -7,7 +7,7 @@ class Vcft():
     INPUT: LIST OF LISTS/TUPLEs
     '''
 
-    def __init__(self,data):
+    def __init__(self, data):
         self.data = data
 
     def list_positions(self):
@@ -29,7 +29,7 @@ class ReadVcfs():
     OUTPUT: DICTIONARY, (FILENAME AND SAMPLE) - REQUIRED DOWNSTREAM
     '''
 
-    def __init__(self,path):
+    def __init__(self, path):
         self.path = path
 
     def variant_builder(self):
@@ -62,7 +62,7 @@ class VariantList():
     IMPROVEMENTS: THIS FUNCTION SHOULD BE MERGED/INHERITED FROM VARIANT_BUILDER
     '''
 
-    def __init__(self,path,filename,sample):
+    def __init__(self, path, filename, sample):
         self.path = path
         self.filename = filename
         self.sample = sample
@@ -74,8 +74,7 @@ class VariantList():
         :return:
         '''
 
-        vals_vcf = ((self.path),(self.sample))
-        varnum = ''
+        vals_vcf = ((self.path), (self.sample))
 
         with open(self.path+self.filename, 'r') as f:
 
@@ -91,7 +90,6 @@ class VariantList():
 
                 else:
 
-                    line_input = ((line.split(sep='\t')[:2] + line.split(sep='\t')[3:5]),)
                     vals_vcf = vals_vcf + ((line.split(sep='\t')[:2] + line.split(sep='\t')[3:5]),)
 
             return vals_vcf
@@ -105,18 +103,17 @@ class VariantList():
         return numberofvariants
 
 
-    def inspect_varaint(self,num):
+    def inspect_varaint(self, num):
         #UTILITY - NOT REQUIRED
         #OUTPUTS A SPECIFIC VARIANT
 
-        self.num = num
 
         try:
 
             return self.vcf_reader()[num+1]
 
         except IndexError:
-
+            ## -- update 13/12/18 - not tested
             print(f'{self.num} not in range. Number of variants {self.number_of_variants()}')
 
     #UTILITIES - NOT REQUIRED
@@ -141,17 +138,17 @@ class VarGraphCons():
     OUTPUT: DICTIONARY AS ABOVE, BUT WITH ANCHOR POINTS INCLUDED
     '''
 
-    def __init__(self):
-        pass
+    def __init__(self, path):
+        self.path = path
 
 
-    def anchor_builder(self,dat):
+    def anchor_builder(self, dat):
         '''
         #ADDS ANCHORS TO VARIANT OBJECTS
         :param dat:
         :return:
         '''
-        self.dat = dat
+
         anchor_string = []
         graphdb = {}
 
@@ -166,7 +163,7 @@ class VarGraphCons():
 
                 temp = [tuple((_), ) for _ in data[2:] if _[0] == i]  # split per chromosome - needed to add anchors
                 temp = (tuple([temp[0][0], str(int(temp[0][1]) - 1), ' ', 'REF'], ),) + tuple(temp)  # add chr start anchor
-                temp = tuple(temp) + (tuple([temp[len(temp) - 1][0], str(int(temp[len(temp) - 1][1]) + 1), ' ','REF']),)  # add chr end anchor
+                temp = tuple(temp) + (tuple([temp[len(temp) - 1][0], str(int(temp[len(temp) - 1][1]) + 1), ' ', 'REF']),)  # add chr end anchor
                 anchors = ()
 
                 for k in range(1, len(temp) - 1):
@@ -179,7 +176,7 @@ class VarGraphCons():
                 anchors = sorted(anchors)
                 rebuild_genome = tuple(rebuild_genome) + tuple(anchors)
 
-                with open(str(key + '_' + 'graph_anchors'), 'w') as f:  # write to file as backup
+                with open(str(self.path + key + '_' + 'graph_anchors'), 'w') as f:  # write to file as backup
 
                     for i in range(0, len(rebuild_genome) - 1):
 
@@ -261,9 +258,7 @@ class RegionOfInterestGraph():
         :return:
         '''
 
-
         refpath = ()
-        buildfullref = ()
 
         for key in self.output:  # Create a merged reference path
 
