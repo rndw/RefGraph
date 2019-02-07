@@ -36,6 +36,12 @@ Extract the archive containing several yeast vcf files in the VCFs dir. After ex
 ## Viewing dot files locally:
 `apt-get install kgraphviewer kgraphviewer-dev`
 
+kgraphviewer displays multiple edges incorrectly. The default is to merge edges, which, defeats the purpose of graphs.
+
+As an alternative, try ZGRViewer. However, the SVG output doesn't colour the node backgrounds and thus limits the number of possible comparisons.
+
+- Currently working on sequenceTubeMap viz.
+
 ## Run driver script:
 Example command:
 
