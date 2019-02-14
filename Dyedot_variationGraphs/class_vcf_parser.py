@@ -79,18 +79,27 @@ class VariantList():
         with open(self.path+self.filename, 'r') as f:
 
             print(f'Reading in variants from {self.filename}')
-
             for line in f:
-
-                varnum = line.split(sep='\t')[1:2]
-
+                var = []
                 if line.startswith('#'):
-
                     continue
-
+                elif ';END=' in line.split()[7]:
+                    var = line.split(sep='\t')[:2] + line.split(sep='\t')[3:5]
+                    var.append([_[4:] for _ in line.split()[7].split(';') if re.search("^END=", _) != None][0])
+                    var.append([_[7:] for _ in line.split()[7].split(';') if re.search("^SVTYPE", _) != None][0])
+                    vals_vcf = vals_vcf + ((var),)
+                    # vals_vcf = vals_vcf + ((line.split()[:2] + line.split()[3:5] + line.split()[7].split(';')[7].split('=')[1] + line.split()[7].split(';')[11].split('=')[1]),)
+                elif ';SVLEN=' in line.split()[7]:
+                    var = line.split(sep='\t')[:2] + line.split(sep='\t')[3:5]
+                    var.append(int([_[6:] for _ in line.split()[7].split(';') if re.search("^SVLEN", _) != None][0]) + int(
+                        line.split()[1]))
+                    var.append([_[7:] for _ in line.split()[7].split(';') if re.search("^SVTYPE", _) != None][0])
+                    vals_vcf = vals_vcf + ((var),)
                 else:
-
-                    vals_vcf = vals_vcf + ((line.split(sep='\t')[:2] + line.split(sep='\t')[3:5]),)
+                    var = line.split(sep='\t')[:2] + line.split(sep='\t')[3:5]
+                    var.append(line.split()[1])
+                    var.append('SMALLVAR')
+                    vals_vcf = vals_vcf + ((var),)
 
             return vals_vcf
 
