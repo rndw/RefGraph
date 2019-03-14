@@ -1,3 +1,5 @@
+# Project is end of life
+
 # DyeDot: Variation graphs from VCF
 
 ## To run:
