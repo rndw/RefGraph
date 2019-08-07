@@ -57,3 +57,6 @@ If you need help:
 Instructions on how to convert a multi-sample vcf file is included in the ./VCFs/readme. A URL with additional vcf files is supplied for download.
 
 DyeDot was only tested on SNP data from yeast as an example. Testing on human data and large structural variants required.
+
+## Interactive visualisation
+Convert the graphviz (.dot or .gv) output to .gml format with `dot graph.gv | gv2gml > graph.gml` and visualise with `Cytoscape 3.0+` via import.
