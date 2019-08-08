@@ -57,7 +57,7 @@ parser.add_argument('-p', metavar='<path>', type=str, help="Path to vcf files")
 parser.add_argument('-o', type=str, metavar='<filename>', help="Output filename")
 parser.add_argument('-c', type=str, metavar='chromosome', nargs='?', default='DEFAULT', const='DEFAULT', help='Chromosome to investigate (default: First element in graph dictionary)')
 parser.add_argument('-b', type=int, metavar='integer', nargs='?', default=0, const=0, help='Start location of region to investigate (default: 0 bp)')
-parser.add_argument('-e', type=int, metavar='integer', nargs='?', default=50000, const=50000, help='End location of region to investigate (default: 50 000 bp)')
+parser.add_argument('-e', type=int, metavar='integer', nargs='?', default=20000, const=20000, help='End location of region to investigate (default: 20 000 bp)')
 args = parser.parse_args()
 
 #FRIENDLY CMD ARGUMENT CORRECTION/WARNING/NOTIFICATIONS
@@ -76,6 +76,7 @@ if name != 'posix' and not path.endswith('\\'):
     path = path + '\\'
     print(f'Path set to: {path}')
 #CONSTRUCT RANGE OBJECT
+#Default: loci = ['chrI',0,50000]
 loci = [args.c, args.b, args.e]
 #CREATE A DICTIONARY OBJECT LINKING EACH KEY TO A VCF
 dat = ReadVcfs(path).variant_builder()
@@ -89,7 +90,8 @@ start = time()
 
 #READ IN VCF FILES AS A DICT - EACH VARIANT IS A TUPLE(CHR, POS, ALT, REF) PER VCF/KEY
 ## -- Saving intermediate files in same dir as vcfs
-output = VarGraphCons(path).anchor_builder(dat)
+#Manual run : output = VarGraphCons().anchor_builder(dat)
+output = VarGraphCons().anchor_builder(dat)
 #LIMIT DATA TO SPECIFIED REGION
 #IMPROVEMENT: OUTPUT MULTIPLE RANGES OR BLOCKS
 RegionOfInterestGraph(output, loci).region()
@@ -99,7 +101,7 @@ refpath = RegionOfInterestGraph(output, loci).referencegr()
 #CONSTRUCT THE REFERENCE PATH
 graph = RefGraphBuilder().referencepath(refpath)
 #CONSTRUCT THE VARAINT PATHS: BUILT ON TOP OF THE REFERENCE PATH
-xgraph = RefGraphBuilder().variantpath(output, graph, loci)
+xgraph = RefGraphBuilder().variantpath(output, graph, loci, refpath)
 
 #ANOTHER FRIENDLY MESSAGE - OUTPUT FILE
 print(f'Writing output to: {str(args.o+".dot")}')

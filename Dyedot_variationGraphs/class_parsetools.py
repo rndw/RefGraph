@@ -1,7 +1,4 @@
 class Ptools():
-    '''
-    DEV UTILITIES CLASS . NOT REQUIRED/ESSENTIAL
-    '''
 
     def __init__(self):
         pass

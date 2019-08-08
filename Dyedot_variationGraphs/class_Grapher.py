@@ -59,7 +59,6 @@ class RefGraphBuilder():
             nw = 0
             temp = []
             matching = []
-            doublematch = []
             ## newvar
 
             x = Digraph(name=key, node_attr={'shape': 'cds', 'color': colour[randint(0, len(colour) - 1)],'fillcolor': colour[randint(0, len(colour) - 1)]} , engine='dot',edge_attr={'arrowhead': 'vee', 'arrowsize': '0.5', 'color': colour[randint(0, len(colour) - 1)],'penwidth':'4'})  # colour can also be set to use x11 names 'red'
@@ -73,30 +72,21 @@ class RefGraphBuilder():
                 if varpath[i - 1] in testref:
                     x.node(varpath[i - 1][1] + varpath[i - 1][2],label=str(varpath[i - 1][0] + ' ' + varpath[i - 1][1] + ' ' + varpath[i - 1][2]), width=str(nw))
                     matching = list(filter(lambda k: varpath[i] in allvar[k], allvar.keys()))
-
-                    if len(matching) >= 1: # exit pathways to a reference node
+                    if matching: # exit pathways to a reference node
                         matching.append(key)
                         x.edge(varpath[i - 1][1] + varpath[i - 1][2], varpath[i][1] + varpath[i][2], label=str(' - '.join(matching)), color='black', style='dotted')
-
+                        matching = []
                     else:
                         x.edge(varpath[i - 1][1] + varpath[i - 1][2], varpath[i][1] + varpath[i][2], label=str(key))
 
                 else:
-                    x.node(varpath[i - 1][1] + varpath[i - 1][2],
-                           label=str(varpath[i - 1][0] + ' ' + varpath[i - 1][1] + ' ' + varpath[i - 1][2]),
-                           width=str(nw))
+                    x.node(varpath[i - 1][1] + varpath[i - 1][2],label=str(varpath[i - 1][0] + ' ' + varpath[i - 1][1] + ' ' + varpath[i - 1][2]),width=str(nw))
                     matching = list(filter(lambda k: varpath[i] in allvar[k], allvar.keys()))
-                    doublematch = list(filter(lambda k: varpath[i - 1] in allvar[k], allvar.keys()))
-                    if len(matching) >= 1 and len(doublematch) == 0:  ####################
-                        #matching.append(key)
-                        x.edge(varpath[i - 1][1] + varpath[i - 1][2], varpath[i][1] + varpath[i][2],label=str(key))
-
-                    if len(matching) >= 1 and len(doublematch) >= 1:
+                    if matching:  ####################
                         matching.append(key)
-                        x.edge(varpath[i - 1][1] + varpath[i - 1][2], varpath[i][1] + varpath[i][2],
-                               label=str(' - '.join(matching)), color='black', style='dotted')
 
-
+                        x.edge(varpath[i - 1][1] + varpath[i - 1][2], varpath[i][1] + varpath[i][2],label=str(' - '.join(matching)), color='black', style='dotted')
+                        matching = []
                     else:
                         x.edge(varpath[i - 1][1] + varpath[i - 1][2], varpath[i][1] + varpath[i][2], label=str(key))
 
@@ -109,8 +99,8 @@ class RefGraphBuilder():
             x.node(str(key + '_'), label=str('Path'))
             x.edge(str(key), str(key + '_'))
 
-            #temp = [_ for _ in varpath if _[2] != 'REF']
-            allvar[key] = varpath
+            temp = [_ for _ in varpath if _[2] != 'REF']
+            allvar[key] = temp
 
             self.graph.subgraph(x)
         return graph
