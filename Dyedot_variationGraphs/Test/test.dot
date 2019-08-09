@@ -1,0 +1,933 @@
+digraph REFERENCE {
+	graph [rankdir=LR splines=spline]
+	node [color=black fillcolor=grey fixedsize=true shape=cds]
+	edge [arrowhead=vee arrowsize=0.5 color=black penwidth=2]
+	"156REF" [label="chrI 156 REF" width=1.2]
+	"156REF" -> "157REF"
+	"157REF" [label="chrI 157 REF" width=1.2]
+	"157REF" -> "167REF"
+	"167REF" [label="chrI 167 REF" width=1.2]
+	"167REF" -> "168REF"
+	"168REF" [label="chrI 168 REF" width=1.2]
+	"168REF" -> "176REF"
+	"176REF" [label="chrI 176 REF" width=7.2]
+	"176REF" -> "177REF"
+	"177REF" [label="chrI 177 REF" width=1.2]
+	"177REF" -> "249REF"
+	"249REF" [label="chrI 249 REF" width=1.2]
+	"249REF" -> "250REF"
+	"250REF" [label="chrI 250 REF" width=1.2]
+	"250REF" -> "261REF"
+	"261REF" [label="chrI 261 REF" width=15.8]
+	"261REF" -> "262REF"
+	"262REF" [label="chrI 262 REF" width=1.2]
+	"262REF" -> "420REF"
+	"420REF" [label="chrI 420 REF" width=5.4]
+	"420REF" -> "421REF"
+	"421REF" [label="chrI 421 REF" width=1.2]
+	"421REF" -> "475REF"
+	"475REF" [label="chrI 475 REF" width=3.2]
+	"475REF" -> "476REF"
+	"476REF" [label="chrI 476 REF" width=1.2]
+	"476REF" -> "508REF"
+	"508REF" [label="chrI 508 REF" width=2.0]
+	"508REF" -> "509REF"
+	"509REF" [label="chrI 509 REF" width=1.2]
+	"509REF" -> "529REF"
+	"529REF" [label="chrI 529 REF" width=7.3]
+	"529REF" -> "530REF"
+	"530REF" [label="chrI 530 REF" width=1.2]
+	"530REF" -> "603REF"
+	"603REF" [label="chrI 603 REF" width=1.2]
+	"603REF" -> "604REF"
+	"604REF" [label="chrI 604 REF" width=1.2]
+	"604REF" -> "609REF"
+	"609REF" [label="chrI 609 REF" width=1.2]
+	"609REF" -> "610REF"
+	"610REF" [label="chrI 610 REF" width=1.2]
+	"610REF" -> "617REF"
+	"617REF" [label="chrI 617 REF" width=1.5]
+	"617REF" -> "618REF"
+	"618REF" [label="chrI 618 REF" width=1.2]
+	"618REF" -> "633REF"
+	"633REF" [label="chrI 633 REF" width=5.8]
+	"633REF" -> "634REF"
+	"634REF" [label="chrI 634 REF" width=1.2]
+	"634REF" -> "692REF"
+	"692REF" [label="chrI 692 REF" width=1.2]
+	"692REF" -> "693REF"
+	"693REF" [label="chrI 693 REF" width=1.2]
+	"693REF" -> "700REF"
+	"700REF" [label="chrI 700 REF" width=1.2]
+	"700REF" -> "701REF"
+	"701REF" [label="chrI 701 REF" width=1.2]
+	"701REF" -> "708REF"
+	"708REF" [label="chrI 708 REF" width=2.0]
+	"708REF" -> "709REF"
+	"709REF" [label="chrI 709 REF" width=1.2]
+	"709REF" -> "729REF"
+	"729REF" [label="chrI 729 REF" width=1.2]
+	"729REF" -> "730REF"
+	"730REF" [label="chrI 730 REF" width=1.2]
+	"730REF" -> "742REF"
+	"742REF" [label="chrI 742 REF" width=8.2]
+	"742REF" -> "743REF"
+	"743REF" [label="chrI 743 REF" width=1.2]
+	"743REF" -> "825REF"
+	"825REF" [label="chrI 825 REF" width=2.1]
+	"825REF" -> "826REF"
+	"826REF" [label="chrI 826 REF" width=1.2]
+	"826REF" -> "847REF"
+	"847REF" [label="chrI 847 REF" width=2.2]
+	"847REF" -> "848REF"
+	"848REF" [label="chrI 848 REF" width=1.2]
+	"848REF" -> "870REF"
+	"870REF" [label="chrI 870 REF" width=3.2]
+	"870REF" -> "871REF"
+	"871REF" [label="chrI 871 REF" width=1.2]
+	"871REF" -> "903REF"
+	"903REF" [label="chrI 903 REF" width=2.0]
+	"903REF" -> "904REF"
+	"904REF" [label="chrI 904 REF" width=1.2]
+	"904REF" -> "924REF"
+	"924REF" [label="chrI 924 REF" width=1.2]
+	"924REF" -> "925REF"
+	"925REF" [label="chrI 925 REF" width=1.2]
+	"925REF" -> "936REF"
+	"936REF" [label="chrI 936 REF" width=4.2]
+	"936REF" -> "937REF"
+	"937REF" [label="chrI 937 REF" width=1.2]
+	"937REF" -> "979REF"
+	"979REF" [label="chrI 979 REF" width=2.7]
+	"979REF" -> "980REF"
+	"980REF" [label="chrI 980 REF" width=1.2]
+	"980REF" -> "1007REF"
+	"1007REF" [label="chrI 1007 REF" width=1.2]
+	"1007REF" -> "1008REF"
+	"1008REF" [label="chrI 1008 REF" width=1.2]
+	"1008REF" -> "1012REF"
+	"1012REF" [label="chrI 1012 REF" width=1.2]
+	"1012REF" -> "1013REF"
+	"1013REF" [label="chrI 1013 REF" width=1.2]
+	"1013REF" -> "1024REF"
+	"1024REF" [label="chrI 1024 REF" width=1.2]
+	"1024REF" -> "1025REF"
+	"1025REF" [label="chrI 1025 REF" width=1.2]
+	"1025REF" -> "1034REF"
+	"1034REF" [label="chrI 1034 REF" width=2.9]
+	"1034REF" -> "1035REF"
+	"1035REF" [label="chrI 1035 REF" width=1.2]
+	"1035REF" -> "1064REF"
+	"1064REF" [label="chrI 1064 REF" width=1.2]
+	"1064REF" -> "1065REF"
+	"1065REF" [label="chrI 1065 REF" width=1.2]
+	"1065REF" -> "1073REF"
+	"1073REF" [label="chrI 1073 REF" width=2.6]
+	"1073REF" -> "1074REF"
+	"1074REF" [label="chrI 1074 REF" width=1.2]
+	"1074REF" -> "1100REF"
+	"1100REF" [label="chrI 1100 REF" width=6.2]
+	"1100REF" -> "1101REF"
+	"1101REF" [label="chrI 1101 REF" width=1.2]
+	"1101REF" -> "1163REF"
+	"1163REF" [label="chrI 1163 REF" width=1.4]
+	"1163REF" -> "1164REF"
+	"1164REF" [label="chrI 1164 REF" width=1.2]
+	"1164REF" -> "1178REF"
+	"1178REF" [label="chrI 1178 REF" width=1.2]
+	"1178REF" -> "1179REF"
+	"1179REF" [label="chrI 1179 REF" width=1.2]
+	"1179REF" -> "1183REF"
+	"1183REF" [label="chrI 1183 REF" width=1.2]
+	"1183REF" -> "1184REF"
+	"1184REF" [label="chrI 1184 REF" width=1.2]
+	"1184REF" -> "1196REF"
+	"1196REF" [label="chrI 1196 REF" width=1.9]
+	"1196REF" -> "1197REF"
+	"1197REF" [label="chrI 1197 REF" width=1.2]
+	"1197REF" -> "1216REF"
+	"1216REF" [label="chrI 1216 REF" width=1.2]
+	"1216REF" -> "1217REF"
+	"1217REF" [label="chrI 1217 REF" width=1.2]
+	"1217REF" -> "1229REF"
+	"1229REF" [label="chrI 1229 REF" width=1.2]
+	"1229REF" -> "1230REF"
+	"1230REF" [label="chrI 1230 REF" width=1.2]
+	"1230REF" -> "1237REF"
+	"1237REF" [label="chrI 1237 REF" width=1.2]
+	"1237REF" -> "1238REF"
+	"1238REF" [label="chrI 1238 REF" width=1.2]
+	"1238REF" -> "1244REF"
+	"1244REF" [label="chrI 1244 REF" width=1.7]
+	"1244REF" -> "1245REF"
+	"1245REF" [label="chrI 1245 REF" width=1.2]
+	"1245REF" -> "1262REF"
+	"1262REF" [label="chrI 1262 REF" width=1.2]
+	"1262REF" -> "1263REF"
+	"1263REF" [label="chrI 1263 REF" width=1.2]
+	"1263REF" -> "1274REF"
+	"1274REF" [label="chrI 1274 REF" width=1.2]
+	"1274REF" -> "1275REF"
+	"1275REF" [label="chrI 1275 REF" width=1.2]
+	"1275REF" -> "1278REF"
+	"1278REF" [label="chrI 1278 REF" width=1.2]
+	"1278REF" -> "1279REF"
+	"1279REF" [label="chrI 1279 REF" width=1.2]
+	"1279REF" -> "1283REF"
+	"1283REF" [label="chrI 1283 REF" width=1.6]
+	"1283REF" -> "1284REF"
+	"1284REF" [label="chrI 1284 REF" width=1.2]
+	"1284REF" -> "1300REF"
+	"1300REF" [label="chrI 1300 REF" width=1.2]
+	"1300REF" -> "1301REF"
+	"1301REF" [label="chrI 1301 REF" width=1.2]
+	"1301REF" -> "1302REF"
+	"1302REF" [label="chrI 1302 REF" width=2.5]
+	"1302REF" -> "1303REF"
+	"1303REF" [label="chrI 1303 REF" width=1.2]
+	"1303REF" -> "1328REF"
+	"1328REF" [label="chrI 1328 REF" width=1.2]
+	"1328REF" -> "1329REF"
+	"1329REF" [label="chrI 1329 REF" width=1.2]
+	"1329REF" -> "1333REF"
+	"1333REF" [label="chrI 1333 REF" width=1.7]
+	"1333REF" -> "1334REF"
+	"1334REF" [label="chrI 1334 REF" width=1.2]
+	"1334REF" -> "1351REF"
+	"1351REF" [label="chrI 1351 REF" width=1.2]
+	"1351REF" -> "1352REF"
+	"1352REF" [label="chrI 1352 REF" width=1.2]
+	"1352REF" -> "1363REF"
+	"1363REF" [label="chrI 1363 REF" width=4.3]
+	"1363REF" -> "1364REF"
+	"1364REF" [label="chrI 1364 REF" width=1.2]
+	"1364REF" -> "1407REF"
+	"1407REF" [label="chrI 1407 REF" width=1.2]
+	"1407REF" -> "1408REF"
+	"1408REF" [label="chrI 1408 REF" width=1.2]
+	"1408REF" -> "1413REF"
+	"1413REF" [label="chrI 1413 REF" width=6.8]
+	"1413REF" -> "1414REF"
+	"1414REF" [label="chrI 1414 REF" width=1.2]
+	"1414REF" -> "1482REF"
+	"1482REF" [label="chrI 1482 REF" width=2.2]
+	"1482REF" -> "1483REF"
+	"1483REF" [label="chrI 1483 REF" width=1.2]
+	"1483REF" -> "1505REF"
+	"1505REF" [label="chrI 1505 REF" width=1.2]
+	"1505REF" -> "1506REF"
+	"1506REF" [label="chrI 1506 REF" width=1.2]
+	"1506REF" -> "1517REF"
+	"1517REF" [label="chrI 1517 REF" width=2.8]
+	"1517REF" -> "1518REF"
+	"1518REF" [label="chrI 1518 REF" width=1.2]
+	"1518REF" -> "1546REF"
+	"1546REF" [label="chrI 1546 REF" width=1.2]
+	"1546REF" -> "1547REF"
+	"1547REF" [label="chrI 1547 REF" width=1.2]
+	"1547REF" -> "1557REF"
+	"1557REF" [label="chrI 1557 REF" width=14.8]
+	"1557REF" -> "1558REF"
+	"1558REF" [label="chrI 1558 REF" width=1.2]
+	"1558REF" -> "1706REF"
+	"1706REF" [label="chrI 1706 REF" width=2.5]
+	"1706REF" -> "1707REF"
+	"1707REF" [label="chrI 1707 REF" width=1.2]
+	"1707REF" -> "1732REF"
+	"1732REF" [label="chrI 1732 REF" width=1.9]
+	"1732REF" -> "1733REF"
+	"1733REF" [label="chrI 1733 REF" width=1.2]
+	"1733REF" -> "1752REF"
+	"1752REF" [label="chrI 1752 REF" width=2.8]
+	"1752REF" -> "1753REF"
+	"1753REF" [label="chrI 1753 REF" width=1.2]
+	"1753REF" -> "1781REF"
+	"1781REF" [label="chrI 1781 REF" width=1.6]
+	"1781REF" -> "1782REF"
+	"1782REF" [label="chrI 1782 REF" width=1.2]
+	"1782REF" -> "1798REF"
+	"1798REF" [label="chrI 1798 REF" width=5.5]
+	"1798REF" -> "1799REF"
+	"1799REF" [label="chrI 1799 REF" width=1.2]
+	"1799REF" -> "1854REF"
+	"1854REF" [label="chrI 1854 REF" width=12.2]
+	"1854REF" -> "1855REF"
+	"1855REF" [label="chrI 1855 REF" width=1.2]
+	"1855REF" -> "1977REF"
+	"1977REF" [label="chrI 1977 REF" width=1.4]
+	"1977REF" -> "1978REF"
+	"1978REF" [label="chrI 1978 REF" width=1.2]
+	"1978REF" -> "1992REF"
+	"1992REF" [label="chrI 1992 REF" width=15.2]
+	"1992REF" -> "1993REF"
+	"1993REF" [label="chrI 1993 REF" width=1.2]
+	"1993REF" -> "2145REF"
+	"2145REF" [label="chrI 2145 REF" width=6.0]
+	"2145REF" -> "2146REF"
+	"2146REF" [label="chrI 2146 REF" width=1.2]
+	"2146REF" -> "2206REF"
+	"2206REF" [label="chrI 2206 REF" width=1.6]
+	"2206REF" -> "2207REF"
+	"2207REF" [label="chrI 2207 REF" width=1.2]
+	"2207REF" -> "2223REF"
+	"2223REF" [label="chrI 2223 REF" width=1.2]
+	"2223REF" -> "2224REF"
+	"2224REF" [label="chrI 2224 REF" width=1.2]
+	"2224REF" -> "2227REF"
+	"2227REF" [label="chrI 2227 REF" width=9.4]
+	"2227REF" -> "2228REF"
+	"2228REF" [label="chrI 2228 REF" width=1.2]
+	"2228REF" -> "2322REF"
+	"2322REF" [label="chrI 2322 REF" width=1.2]
+	"2322REF" -> "2323REF"
+	"2323REF" [label="chrI 2323 REF" width=1.2]
+	"2323REF" -> "2330REF"
+	"2330REF" [label="chrI 2330 REF" width=1.2]
+	"2330REF" -> "2331REF"
+	"2331REF" [label="chrI 2331 REF" width=1.2]
+	"2331REF" -> "2335REF"
+	"2335REF" [label="chrI 2335 REF" width=1.2]
+	"2335REF" -> "2336REF"
+	"2336REF" [label="chrI 2336 REF" width=1.2]
+	"2336REF" -> "2339REF"
+	"2339REF" [label="chrI 2339 REF" width=1.2]
+	"2339REF" -> "2340REF"
+	"2340REF" [label="chrI 2340 REF" width=1.2]
+	"2340REF" -> "2352REF"
+	"2352REF" [label="chrI 2352 REF" width=1.7]
+	"2352REF" -> "2353REF"
+	"2353REF" [label="chrI 2353 REF" width=1.2]
+	"2353REF" -> "2370REF"
+	"2370REF" [label="chrI 2370 REF" width=1.2]
+	"2370REF" -> "2371REF"
+	"2371REF" [label="chrI 2371 REF" width=1.2]
+	"2371REF" -> "2376REF"
+	"2376REF" [label="chrI 2376 REF" width=2.8]
+	"2376REF" -> "2377REF"
+	"2377REF" [label="chrI 2377 REF" width=1.2]
+	"2377REF" -> "2405REF"
+	"2405REF" [label="chrI 2405 REF" width=1.2]
+	"2405REF" -> "2406REF"
+	"2406REF" [label="chrI 2406 REF" width=1.2]
+	"2406REF" -> "2412REF"
+	"2412REF" [label="chrI 2412 REF" width=7.4]
+	"2412REF" -> "2413REF"
+	"2413REF" [label="chrI 2413 REF" width=1.2]
+	"2413REF" -> "2487REF"
+	"2487REF" [label="chrI 2487 REF" width=2.3]
+	"2487REF" -> "2488REF"
+	"2488REF" [label="chrI 2488 REF" width=1.2]
+	"2488REF" -> "2511REF"
+	"2511REF" [label="chrI 2511 REF" width=1.2]
+	"2511REF" -> "2512REF"
+	"2512REF" [label="chrI 2512 REF" width=1.2]
+	"2512REF" -> "2523REF"
+	"2523REF" [label="chrI 2523 REF" width=1.7]
+	"2523REF" -> "2524REF"
+	"2524REF" [label="chrI 2524 REF" width=1.2]
+	"2524REF" -> "2541REF"
+	"2541REF" [label="chrI 2541 REF" width=4.5]
+	"2541REF" -> "2542REF"
+	"2542REF" [label="chrI 2542 REF" width=1.2]
+	"2542REF" -> "2587REF"
+	"2587REF" [label="chrI 2587 REF" width=11.7]
+	"2587REF" -> "2588REF"
+	"2588REF" [label="chrI 2588 REF" width=1.2]
+	"2588REF" -> "2705REF"
+	"2705REF" [label="chrI 2705 REF" width=4.1]
+	"2705REF" -> "2706REF"
+	"2706REF" [label="chrI 2706 REF" width=1.2]
+	"2706REF" -> "2747REF"
+	"2747REF" [label="chrI 2747 REF" width=4.1]
+	"2747REF" -> "2748REF"
+	"2748REF" [label="chrI 2748 REF" width=1.2]
+	"2748REF" -> "2789REF"
+	"2789REF" [label="chrI 2789 REF" width=1.2]
+	"2789REF" -> "2790REF"
+	"2790REF" [label="chrI 2790 REF" width=1.2]
+	"2790REF" -> "2796REF"
+	"2796REF" [label="chrI 2796 REF" width=9.3]
+	"2796REF" -> "2797REF"
+	"2797REF" [label="chrI 2797 REF" width=1.2]
+	"2797REF" -> "2890REF"
+	"2890REF" [label="chrI 2890 REF" width=7.8]
+	"2890REF" -> "2891REF"
+	"2891REF" [label="chrI 2891 REF" width=1.2]
+	"2891REF" -> "2969REF"
+	"2969REF" [label="chrI 2969 REF" width=1.6]
+	"2969REF" -> "2970REF"
+	"2970REF" [label="chrI 2970 REF" width=1.2]
+	"2970REF" -> "2986REF"
+	"2986REF" [label="chrI 2986 REF" width=6.8]
+	"2986REF" -> "2987REF"
+	"2987REF" [label="chrI 2987 REF" width=1.2]
+	"2987REF" -> "3055REF"
+	"3055REF" [label="chrI 3055 REF" width=3.0]
+	"3055REF" -> "3056REF"
+	"3056REF" [label="chrI 3056 REF" width=1.2]
+	"3056REF" -> "3086REF"
+	"3086REF" [label="chrI 3086 REF" width=5.3]
+	"3086REF" -> "3087REF"
+	"3087REF" [label="chrI 3087 REF" width=1.2]
+	"3087REF" -> "3140REF"
+	"3140REF" [label="chrI 3140 REF" width=4.5]
+	"3140REF" -> "3141REF"
+	"3141REF" [label="chrI 3141 REF" width=1.2]
+	"3141REF" -> "3186REF"
+	"3186REF" [label="chrI 3186 REF" width=1.9]
+	"3186REF" -> "3187REF"
+	"3187REF" [label="chrI 3187 REF" width=1.2]
+	"3187REF" -> "3206REF"
+	"3206REF" [label="chrI 3206 REF" width=10.3]
+	"3206REF" -> "3207REF"
+	"3207REF" [label="chrI 3207 REF" width=1.2]
+	"3207REF" -> "3310REF"
+	"3310REF" [label="chrI 3310 REF" width=1.6]
+	"3310REF" -> "3311REF"
+	"3311REF" [label="chrI 3311 REF" width=1.2]
+	"3311REF" -> "3327REF"
+	"3327REF" [label="chrI 3327 REF" width=1.3]
+	"3327REF" -> "3328REF"
+	"3328REF" [label="chrI 3328 REF" width=1.2]
+	"3328REF" -> "3341REF"
+	"3341REF" [label="chrI 3341 REF" width=4.6]
+	"3341REF" -> "3342REF"
+	"3342REF" [label="chrI 3342 REF" width=1.2]
+	"3342REF" -> "3388REF"
+	"3388REF" [label="chrI 3388 REF" width=7.2]
+	"3388REF" -> "3389REF"
+	"3389REF" [label="chrI 3389 REF" width=1.2]
+	"3389REF" -> "3461REF"
+	"3461REF" [label="chrI 3461 REF" width=15.7]
+	"3461REF" -> "3462REF"
+	"3462REF" [label="chrI 3462 REF" width=1.2]
+	"3462REF" -> "3619REF"
+	"3619REF" [label="chrI 3619 REF" width=16.4]
+	"3619REF" -> "3620REF"
+	"3620REF" [label="chrI 3620 REF" width=1.2]
+	"3620REF" -> "3784REF"
+	"3784REF" [label="chrI 3784 REF" width=15.6]
+	"3784REF" -> "3785REF"
+	"3785REF" [label="chrI 3785 REF" width=1.2]
+	"3785REF" -> "3941REF"
+	"3941REF" [label="chrI 3941 REF" width=4.7]
+	"3941REF" -> "3942REF"
+	"3942REF" [label="chrI 3942 REF" width=1.2]
+	"3942REF" -> "3989REF"
+	"3989REF" [label="chrI 3989 REF" width=3.1]
+	"3989REF" -> "3990REF"
+	"3990REF" [label="chrI 3990 REF" width=1.2]
+	"3990REF" -> "4021REF"
+	"4021REF" [label="chrI 4021 REF" width=4.4]
+	"4021REF" -> "4022REF"
+	"4022REF" [label="chrI 4022 REF" width=1.2]
+	"4022REF" -> "4066REF"
+	"4066REF" [label="chrI 4066 REF" width=5.2]
+	"4066REF" -> "4067REF"
+	"4067REF" [label="chrI 4067 REF" width=1.2]
+	"4067REF" -> "4119REF"
+	"4119REF" [label="chrI 4119 REF" width=787.6]
+	"4119REF" -> "4120REF"
+	"4120REF" [label="chrI 4120 REF" width=1.2]
+	"4120REF" -> "11996REF"
+	"11996REF" [label="chrI 11996 REF" width=12.1]
+	"11996REF" -> "11997REF"
+	"11997REF" [label="chrI 11997 REF" width=1.2]
+	"11997REF" -> "12118REF"
+	"12119REF" [label="chrI 12119 REF"]
+	"12118REF" [label="chrI 12118 REF"]
+	"12118REF" -> "12119REF"
+	REF [label=Reference width=1.6]
+	REF_ [label=Path]
+	REF -> REF_
+	subgraph yi38small {
+		node [color="#a8803b" fillcolor="#7baac4" shape=cds]
+		edge [arrowhead=vee arrowsize=0.5 color="#a8803b" penwidth=4]
+		"156REF" [label="chrI 156 REF" width=1.2]
+		"156REF" -> "157T" [label=yi38small]
+		"157T" [label="chrI 157 T" width=1.2]
+		"157T" -> "167REF" [label=yi38small]
+		"167REF" [label="chrI 167 REF" width=1.2]
+		"167REF" -> "168C" [label=yi38small]
+		"168C" [label="chrI 168 C" width=1.2]
+		"168C" -> "176REF" [label=yi38small]
+		"176REF" [label="chrI 176 REF" width=7.2]
+		"176REF" -> "177C" [label=yi38small]
+		"177C" [label="chrI 177 C" width=1.2]
+		"177C" -> "249REF" [label=yi38small]
+		"249REF" [label="chrI 249 REF" width=1.2]
+		"249REF" -> "250A" [label=yi38small]
+		"250A" [label="chrI 250 A" width=1.2]
+		"250A" -> "261REF" [label=yi38small]
+		"261REF" [label="chrI 261 REF" width=15.8]
+		"261REF" -> "262G" [label=yi38small]
+		"262G" [label="chrI 262 G" width=1.2]
+		"262G" -> "420REF" [label=yi38small]
+		"420REF" [label="chrI 420 REF" width=5.4]
+		"420REF" -> "421A" [label=yi38small]
+		"421A" [label="chrI 421 A" width=1.2]
+		"421A" -> "475REF" [label=yi38small]
+		"475REF" [label="chrI 475 REF" width=50.3]
+		"475REF" -> "476T" [label=yi38small]
+		"476T" [label="chrI 476 T" width=1.2]
+		"476T" -> "979REF" [label=yi38small]
+		"979REF" [label="chrI 979 REF" width=2.7]
+		"979REF" -> "980AC" [label=yi38small]
+		"980AC" [label="chrI 980 AC" width=1.2]
+		"980AC" -> "1007REF" [label=yi38small]
+		"1007REF" [label="chrI 1007 REF" width=1.2]
+		"1007REF" -> "1008GTATC" [label=yi38small]
+		"1008GTATC" [label="chrI 1008 GTATC" width=1.2]
+		"1008GTATC" -> "1012REF" [label=yi38small]
+		"1012REF" [label="chrI 1012 REF" width=5.1]
+		"1012REF" -> "1013C" [label=yi38small]
+		"1013C" [label="chrI 1013 C" width=1.2]
+		"1013C" -> "1064REF" [label=yi38small]
+		"1064REF" [label="chrI 1064 REF" width=11.3]
+		"1064REF" -> "1065T" [label=yi38small]
+		"1065T" [label="chrI 1065 T" width=1.2]
+		"1065T" -> "1178REF" [label=yi38small]
+		"1178REF" [label="chrI 1178 REF" width=6.5]
+		"1178REF" -> "1179T" [label=yi38small]
+		"1179T" [label="chrI 1179 T" width=1.2]
+		"1179T" -> "1244REF" [label=yi38small]
+		"1244REF" [label="chrI 1244 REF" width=1.7]
+		"1244REF" -> "1245A" [label=yi38small]
+		"1245A" [label="chrI 1245 A" width=1.2]
+		"1245A" -> "1262REF" [label=yi38small]
+		"1262REF" [label="chrI 1262 REF" width=3.9]
+		"1262REF" -> "1263T" [label=yi38small]
+		"1263T" [label="chrI 1263 T" width=1.2]
+		"1263T" -> "1302REF" [label=yi38small]
+		"1302REF" [label="chrI 1302 REF" width=44.9]
+		"1302REF" -> "1303T" [label=yi38small]
+		"1303T" [label="chrI 1303 T" width=1.2]
+		"1303T" -> "1752REF" [label=yi38small]
+		"1752REF" [label="chrI 1752 REF" width=2.8]
+		"1752REF" -> "1753A" [label=yi38small]
+		"1753A" [label="chrI 1753 A" width=1.2]
+		"1753A" -> "1781REF" [label=yi38small]
+		"1781REF" [label="chrI 1781 REF" width=1.6]
+		"1781REF" -> "1782T" [label=yi38small]
+		"1782T" [label="chrI 1782 T" width=1.2]
+		"1782T" -> "1798REF" [label=yi38small]
+		"1798REF" [label="chrI 1798 REF" width=34.6]
+		"1798REF" -> "1799A" [label=yi38small]
+		"1799A" [label="chrI 1799 A" width=1.2]
+		"1799A" -> "2145REF" [label=yi38small]
+		"2145REF" [label="chrI 2145 REF" width=18.4]
+		"2145REF" -> "2146A" [label=yi38small]
+		"2146A" [label="chrI 2146 A" width=1.2]
+		"2146A" -> "2330REF" [label=yi38small]
+		"2330REF" [label="chrI 2330 REF" width=1.2]
+		"2330REF" -> "2331C" [label=yi38small]
+		"2331C" [label="chrI 2331 C" width=1.2]
+		"2331C" -> "2339REF" [label=yi38small]
+		"2339REF" [label="chrI 2339 REF" width=3.0]
+		"2339REF" -> "2340C" [label=yi38small]
+		"2340C" [label="chrI 2340 C" width=1.2]
+		"2340C" -> "2370REF" [label=yi38small]
+		"2370REF" [label="chrI 2370 REF" width=1.2]
+		"2370REF" -> "2371ACTA" [label=yi38small]
+		"2371ACTA" [label="chrI 2371 ACTA" width=1.2]
+		"2371ACTA" -> "2376REF" [label=yi38small]
+		"2376REF" [label="chrI 2376 REF" width=2.8]
+		"2376REF" -> "2377A" [label=yi38small]
+		"2377A" [label="chrI 2377 A" width=1.2]
+		"2377A" -> "2405REF" [label=yi38small]
+		"2405REF" [label="chrI 2405 REF" width=1.2]
+		"2405REF" -> "2406C" [label=yi38small]
+		"2406C" [label="chrI 2406 C" width=1.2]
+		"2406C" -> "2412REF" [label=yi38small]
+		"2412REF" [label="chrI 2412 REF" width=9.8]
+		"2412REF" -> "2413G" [label=yi38small]
+		"2413G" [label="chrI 2413 G" width=1.2]
+		"2413G" -> "2511REF" [label=yi38small]
+		"2511REF" [label="chrI 2511 REF" width=1.2]
+		"2511REF" -> "2512G" [label=yi38small]
+		"2512G" [label="chrI 2512 G" width=1.2]
+		"2512G" -> "2523REF" [label=yi38small]
+		"2523REF" [label="chrI 2523 REF" width=1.7]
+		"2523REF" -> "2524C" [label=yi38small]
+		"2524C" [label="chrI 2524 C" width=1.2]
+		"2524C" -> "2541REF" [label=yi38small]
+		"2541REF" [label="chrI 2541 REF" width=4.5]
+		"2541REF" -> "2542G" [label=yi38small]
+		"2542G" [label="chrI 2542 G" width=1.2]
+		"2542G" -> "2587REF" [label=yi38small]
+		"2587REF" [label="chrI 2587 REF" width=11.7]
+		"2587REF" -> "2588T" [label=yi38small]
+		"2588T" [label="chrI 2588 T" width=1.2]
+		"2588T" -> "2705REF" [label=yi38small]
+		"2705REF" [label="chrI 2705 REF" width=4.1]
+		"2705REF" -> "2706G" [label=yi38small]
+		"2706G" [label="chrI 2706 G" width=1.2]
+		"2706G" -> "2747REF" [label=yi38small]
+		"2747REF" [label="chrI 2747 REF" width=4.1]
+		"2747REF" -> "2748T" [label=yi38small]
+		"2748T" [label="chrI 2748 T" width=1.2]
+		"2748T" -> "2789REF" [label=yi38small]
+		"2789REF" [label="chrI 2789 REF" width=1.2]
+		"2789REF" -> "2790A" [label=yi38small]
+		"2790A" [label="chrI 2790 A" width=1.2]
+		"2790A" -> "2796REF" [label=yi38small]
+		"2796REF" [label="chrI 2796 REF" width=9.3]
+		"2796REF" -> "2797G" [label=yi38small]
+		"2797G" [label="chrI 2797 G" width=1.2]
+		"2797G" -> "2890REF" [label=yi38small]
+		"2890REF" [label="chrI 2890 REF" width=7.8]
+		"2890REF" -> "2891T" [label=yi38small]
+		"2891T" [label="chrI 2891 T" width=1.2]
+		"2891T" -> "2969REF" [label=yi38small]
+		"2969REF" [label="chrI 2969 REF" width=1.6]
+		"2969REF" -> "2970C" [label=yi38small]
+		"2970C" [label="chrI 2970 C" width=1.2]
+		"2970C" -> "2986REF" [label=yi38small]
+		"2986REF" [label="chrI 2986 REF" width=6.8]
+		"2986REF" -> "2987A" [label=yi38small]
+		"2987A" [label="chrI 2987 A" width=1.2]
+		"2987A" -> "3055REF" [label=yi38small]
+		"3055REF" [label="chrI 3055 REF" width=3.0]
+		"3055REF" -> "3056A" [label=yi38small]
+		"3056A" [label="chrI 3056 A" width=1.2]
+		"3056A" -> "3086REF" [label=yi38small]
+		"3086REF" [label="chrI 3086 REF" width=5.3]
+		"3086REF" -> "3087G" [label=yi38small]
+		"3087G" [label="chrI 3087 G" width=1.2]
+		"3087G" -> "3140REF" [label=yi38small]
+		"3140REF" [label="chrI 3140 REF" width=4.5]
+		"3140REF" -> "3141T" [label=yi38small]
+		"3141T" [label="chrI 3141 T" width=1.2]
+		"3141T" -> "3186REF" [label=yi38small]
+		"3186REF" [label="chrI 3186 REF" width=1.9]
+		"3186REF" -> "3187C" [label=yi38small]
+		"3187C" [label="chrI 3187 C" width=1.2]
+		"3187C" -> "3206REF" [label=yi38small]
+		"3206REF" [label="chrI 3206 REF" width=10.3]
+		"3206REF" -> "3207G" [label=yi38small]
+		"3207G" [label="chrI 3207 G" width=1.2]
+		"3207G" -> "3310REF" [label=yi38small]
+		"3310REF" [label="chrI 3310 REF" width=1.6]
+		"3310REF" -> "3311CCC" [label=yi38small]
+		"3311CCC" [label="chrI 3311 CCC" width=1.2]
+		"3311CCC" -> "3327REF" [label=yi38small]
+		"3327REF" [label="chrI 3327 REF" width=1.3]
+		"3327REF" -> "3328C" [label=yi38small]
+		"3328C" [label="chrI 3328 C" width=1.2]
+		"3328C" -> "3341REF" [label=yi38small]
+		"3341REF" [label="chrI 3341 REF" width=4.6]
+		"3341REF" -> "3342G" [label=yi38small]
+		"3342G" [label="chrI 3342 G" width=1.2]
+		"3342G" -> "3388REF" [label=yi38small]
+		"3388REF" [label="chrI 3388 REF" width=7.2]
+		"3388REF" -> "3389T" [label=yi38small]
+		"3389T" [label="chrI 3389 T" width=1.2]
+		"3389T" -> "3461REF" [label=yi38small]
+		"3461REF" [label="chrI 3461 REF" width=15.7]
+		"3461REF" -> "3462C" [label=yi38small]
+		"3462C" [label="chrI 3462 C" width=1.2]
+		"3462C" -> "3619REF" [label=yi38small]
+		"3619REF" [label="chrI 3619 REF" width=16.4]
+		"3619REF" -> "3620A" [label=yi38small]
+		"3620A" [label="chrI 3620 A" width=1.2]
+		"3620A" -> "3784REF" [label=yi38small]
+		"3784REF" [label="chrI 3784 REF" width=15.6]
+		"3784REF" -> "3785C" [label=yi38small]
+		"3785C" [label="chrI 3785 C" width=1.2]
+		"3785C" -> "3941REF" [label=yi38small]
+		"3941REF" [label="chrI 3941 REF" width=4.7]
+		"3941REF" -> "3942A" [label=yi38small]
+		"3942A" [label="chrI 3942 A" width=1.2]
+		"3942A" -> "3989REF" [label=yi38small]
+		"3989REF" [label="chrI 3989 REF" width=3.1]
+		"3989REF" -> "3990A" [label=yi38small]
+		"3990A" [label="chrI 3990 A" width=1.2]
+		"3990A" -> "4021REF" [label=yi38small]
+		"4021REF" [label="chrI 4021 REF" width=4.4]
+		"4021REF" -> "4022A" [label=yi38small]
+		"4022A" [label="chrI 4022 A" width=1.2]
+		"4022A" -> "4066REF" [label=yi38small]
+		"4066REF" [label="chrI 4066 REF" width=5.2]
+		"4066REF" -> "4067G" [label=yi38small]
+		"4067G" [label="chrI 4067 G" width=1.2]
+		"4067G" -> "4119A" [label=yi38small]
+		"4120REF" [label="chrI 4120 REF"]
+		"4119A" [label="chrI 4119 A"]
+		"4119A" -> "4120REF"
+		yi38small [label=yi38small]
+		yi38small_ [label=Path]
+		yi38small -> yi38small_
+	}
+	subgraph j11small {
+		node [color="#bf7f40" fillcolor="#297762" shape=cds]
+		edge [arrowhead=vee arrowsize=0.5 color="#da9ebe" penwidth=4]
+		"1274REF" [label="chrI 1274 REF" width=1.2]
+		"1274REF" -> "1275G" [label=j11small]
+		"1275G" [label="chrI 1275 G" width=1.2]
+		"1275G" -> "1283REF" [label=j11small]
+		"1283REF" [label="chrI 1283 REF" width=1.6]
+		"1283REF" -> "1284C" [label=j11small]
+		"1284C" [label="chrI 1284 C" width=1.2]
+		"1284C" -> "1300REF" [label=j11small]
+		"1300REF" [label="chrI 1300 REF" width=103.8]
+		"1300REF" -> "1301A" [label=j11small]
+		"1301A" [label="chrI 1301 A" width=1.2]
+		"1301A" -> "2339REF" [label=j11small]
+		"2340C" [label="chrI 2340 C"]
+		"2339REF" [label="chrI 2339 REF"]
+		"2339REF" -> "2340C"
+		j11small [label=j11small]
+		j11small_ [label=Path]
+		j11small -> j11small_
+	}
+	subgraph mf1small {
+		node [color="#865e48" fillcolor="#7baac4" shape=cds]
+		edge [arrowhead=vee arrowsize=0.5 color="#b24d4e" penwidth=4]
+		"508REF" [label="chrI 508 REF" width=2.0]
+		"508REF" -> "509A" [label=mf1small]
+		"509A" [label="chrI 509 A" width=1.2]
+		"509A" -> "529REF" [label=mf1small]
+		"529REF" [label="chrI 529 REF" width=7.3]
+		"529REF" -> "530G" [label=mf1small]
+		"530G" [label="chrI 530 G" width=1.2]
+		"530G" -> "603REF" [label=mf1small]
+		"603REF" [label="chrI 603 REF" width=1.2]
+		"603REF" -> "604T" [label=mf1small]
+		"604T" [label="chrI 604 T" width=1.2]
+		"604T" -> "609REF" [label=mf1small]
+		"609REF" [label="chrI 609 REF" width=1.2]
+		"609REF" -> "610A" [label=mf1small]
+		"610A" [label="chrI 610 A" width=1.2]
+		"610A" -> "617REF" [label=mf1small]
+		"617REF" [label="chrI 617 REF" width=1.5]
+		"617REF" -> "618C" [label=mf1small]
+		"618C" [label="chrI 618 C" width=1.2]
+		"618C" -> "633REF" [label=mf1small]
+		"633REF" [label="chrI 633 REF" width=5.8]
+		"633REF" -> "634T" [label=mf1small]
+		"634T" [label="chrI 634 T" width=1.2]
+		"634T" -> "692REF" [label=mf1small]
+		"692REF" [label="chrI 692 REF" width=1.2]
+		"692REF" -> "693A" [label=mf1small]
+		"693A" [label="chrI 693 A" width=1.2]
+		"693A" -> "700REF" [label=mf1small]
+		"700REF" [label="chrI 700 REF" width=1.2]
+		"700REF" -> "701AAT" [label=mf1small]
+		"701AAT" [label="chrI 701 AAT" width=1.2]
+		"701AAT" -> "708G" [label=mf1small]
+		"708G" [label="chrI 708 G" width=2.0]
+		"708G" -> "709C" [label=mf1small]
+		"709C" [label="chrI 709 C" width=1.2]
+		"709C" -> "729REF" [label=mf1small]
+		"729REF" [label="chrI 729 REF" width=1.2]
+		"729REF" -> "730T" [label=mf1small]
+		"730T" [label="chrI 730 T" width=1.2]
+		"730T" -> "742REF" [label=mf1small]
+		"742REF" [label="chrI 742 REF" width=8.2]
+		"742REF" -> "743T" [label=mf1small]
+		"743T" [label="chrI 743 T" width=1.2]
+		"743T" -> "825REF" [label=mf1small]
+		"825REF" [label="chrI 825 REF" width=2.1]
+		"825REF" -> "826C" [label=mf1small]
+		"826C" [label="chrI 826 C" width=1.2]
+		"826C" -> "847REF" [label=mf1small]
+		"847REF" [label="chrI 847 REF" width=2.2]
+		"847REF" -> "848T" [label=mf1small]
+		"848T" [label="chrI 848 T" width=1.2]
+		"848T" -> "870REF" [label=mf1small]
+		"870REF" [label="chrI 870 REF" width=3.2]
+		"870REF" -> "871C" [label=mf1small]
+		"871C" [label="chrI 871 C" width=1.2]
+		"871C" -> "903REF" [label=mf1small]
+		"903REF" [label="chrI 903 REF" width=2.0]
+		"903REF" -> "904A" [label=mf1small]
+		"904A" [label="chrI 904 A" width=1.2]
+		"904A" -> "924REF" [label=mf1small]
+		"924REF" [label="chrI 924 REF" width=1.2]
+		"924REF" -> "925C" [label=mf1small]
+		"925C" [label="chrI 925 C" width=1.2]
+		"925C" -> "936REF" [label=mf1small]
+		"936REF" [label="chrI 936 REF" width=8.7]
+		"936REF" -> "937T" [label=mf1small]
+		"937T" [label="chrI 937 T" width=1.2]
+		"937T" -> "1024REF" [label=mf1small]
+		"1024REF" [label="chrI 1024 REF" width=1.2]
+		"1024REF" -> "1025T" [label=mf1small]
+		"1025T" [label="chrI 1025 T" width=1.2]
+		"1025T" -> "1034REF" [label=mf1small]
+		"1034REF" [label="chrI 1034 REF" width=3.8]
+		"1034REF" -> "1035T" [label=mf1small]
+		"1035T" [label="chrI 1035 T" width=1.2]
+		"1035T" -> "1073REF" [label=mf1small]
+		"1073REF" [label="chrI 1073 REF" width=2.6]
+		"1073REF" -> "1074A" [label=mf1small]
+		"1074A" [label="chrI 1074 A" width=1.2]
+		"1074A" -> "1100REF" [label=mf1small]
+		"1100REF" [label="chrI 1100 REF" width=6.2]
+		"1100REF" -> "1101A" [label=mf1small]
+		"1101A" [label="chrI 1101 A" width=1.2]
+		"1101A" -> "1163REF" [label=mf1small]
+		"1163REF" [label="chrI 1163 REF" width=1.9]
+		"1163REF" -> "1164C" [label=mf1small]
+		"1164C" [label="chrI 1164 C" width=1.2]
+		"1164C" -> "1183REF" [label=mf1small]
+		"1183REF" [label="chrI 1183 REF" width=1.2]
+		"1183REF" -> "1184T" [label=mf1small]
+		"1184T" [label="chrI 1184 T" width=1.2]
+		"1184T" -> "1196REF" [label=mf1small]
+		"1196REF" [label="chrI 1196 REF" width=1.9]
+		"1196REF" -> "1197T" [label=mf1small]
+		"1197T" [label="chrI 1197 T" width=1.2]
+		"1197T" -> "1216REF" [label=mf1small]
+		"1216REF" [label="chrI 1216 REF" width=1.2]
+		"1216REF" -> "1217T" [label=mf1small]
+		"1217T" [label="chrI 1217 T" width=1.2]
+		"1217T" -> "1229REF" [label=mf1small]
+		"1229REF" [label="chrI 1229 REF" width=1.2]
+		"1229REF" -> "1230A" [label=mf1small]
+		"1230A" [label="chrI 1230 A" width=1.2]
+		"1230A" -> "1237REF" [label=mf1small]
+		"1237REF" [label="chrI 1237 REF" width=2.4]
+		"1237REF" -> "1238T" [label=mf1small]
+		"1238T" [label="chrI 1238 T" width=1.2]
+		"1238T" -> "1262REF" [label=mf1small]
+		"1262REF" [label="chrI 1262 REF" width=1.5]
+		"1262REF" -> "1263T" [label="yi38small - mf1small" color=black style=dotted]
+		"1263T" [label="chrI 1263 T" width=1.2]
+		"1263T" -> "1278REF" [label=mf1small]
+		"1278REF" [label="chrI 1278 REF" width=4.9]
+		"1278REF" -> "1279T" [label=mf1small]
+		"1279T" [label="chrI 1279 T" width=1.2]
+		"1279T" -> "1328REF" [label=mf1small]
+		"1328REF" [label="chrI 1328 REF" width=1.2]
+		"1328REF" -> "1329A" [label=mf1small]
+		"1329A" [label="chrI 1329 A" width=1.2]
+		"1329A" -> "1333REF" [label=mf1small]
+		"1333REF" [label="chrI 1333 REF" width=1.7]
+		"1333REF" -> "1334T" [label=mf1small]
+		"1334T" [label="chrI 1334 T" width=1.2]
+		"1334T" -> "1351REF" [label=mf1small]
+		"1351REF" [label="chrI 1351 REF" width=1.2]
+		"1351REF" -> "1352G" [label=mf1small]
+		"1352G" [label="chrI 1352 G" width=1.2]
+		"1352G" -> "1363REF" [label=mf1small]
+		"1363REF" [label="chrI 1363 REF" width=4.3]
+		"1363REF" -> "1364C" [label=mf1small]
+		"1364C" [label="chrI 1364 C" width=1.2]
+		"1364C" -> "1407REF" [label=mf1small]
+		"1407REF" [label="chrI 1407 REF" width=1.2]
+		"1407REF" -> "1408T" [label=mf1small]
+		"1408T" [label="chrI 1408 T" width=1.2]
+		"1408T" -> "1413REF" [label=mf1small]
+		"1413REF" [label="chrI 1413 REF" width=6.8]
+		"1413REF" -> "1414A" [label=mf1small]
+		"1414A" [label="chrI 1414 A" width=1.2]
+		"1414A" -> "1482REF" [label=mf1small]
+		"1482REF" [label="chrI 1482 REF" width=2.2]
+		"1482REF" -> "1483A" [label=mf1small]
+		"1483A" [label="chrI 1483 A" width=1.2]
+		"1483A" -> "1505REF" [label=mf1small]
+		"1505REF" [label="chrI 1505 REF" width=1.2]
+		"1505REF" -> "1506G" [label=mf1small]
+		"1506G" [label="chrI 1506 G" width=1.2]
+		"1506G" -> "1517REF" [label=mf1small]
+		"1517REF" [label="chrI 1517 REF" width=2.8]
+		"1517REF" -> "1518C" [label=mf1small]
+		"1518C" [label="chrI 1518 C" width=1.2]
+		"1518C" -> "1546REF" [label=mf1small]
+		"1546REF" [label="chrI 1546 REF" width=1.2]
+		"1546REF" -> "1547A" [label=mf1small]
+		"1547A" [label="chrI 1547 A" width=1.2]
+		"1547A" -> "1557REF" [label=mf1small]
+		"1557REF" [label="chrI 1557 REF" width=14.8]
+		"1557REF" -> "1558A" [label=mf1small]
+		"1558A" [label="chrI 1558 A" width=1.2]
+		"1558A" -> "1706REF" [label=mf1small]
+		"1706REF" [label="chrI 1706 REF" width=2.5]
+		"1706REF" -> "1707G" [label=mf1small]
+		"1707G" [label="chrI 1707 G" width=1.2]
+		"1707G" -> "1732REF" [label=mf1small]
+		"1732REF" [label="chrI 1732 REF" width=12.1]
+		"1732REF" -> "1733A" [label=mf1small]
+		"1733A" [label="chrI 1733 A" width=1.2]
+		"1733A" -> "1854REF" [label=mf1small]
+		"1854REF" [label="chrI 1854 REF" width=12.2]
+		"1854REF" -> "1855A" [label=mf1small]
+		"1855A" [label="chrI 1855 A" width=1.2]
+		"1855A" -> "1977REF" [label=mf1small]
+		"1977REF" [label="chrI 1977 REF" width=1.4]
+		"1977REF" -> "1978A" [label=mf1small]
+		"1978A" [label="chrI 1978 A" width=1.2]
+		"1978A" -> "1992REF" [label=mf1small]
+		"1992REF" [label="chrI 1992 REF" width=15.2]
+		"1992REF" -> "1993C" [label=mf1small]
+		"1993C" [label="chrI 1993 C" width=1.2]
+		"1993C" -> "2145REF" [label=mf1small]
+		"2145REF" [label="chrI 2145 REF" width=6.0]
+		"2145REF" -> "2146A" [label="yi38small - mf1small" color=black style=dotted]
+		"2146A" [label="chrI 2146 A" width=1.2]
+		"2146A" -> "2206REF" [label=mf1small]
+		"2206REF" [label="chrI 2206 REF" width=1.6]
+		"2206REF" -> "2207G" [label=mf1small]
+		"2207G" [label="chrI 2207 G" width=1.2]
+		"2207G" -> "2223REF" [label=mf1small]
+		"2223REF" [label="chrI 2223 REF" width=1.2]
+		"2223REF" -> "2224AC" [label=mf1small]
+		"2224AC" [label="chrI 2224 AC" width=1.2]
+		"2224AC" -> "2227REF" [label=mf1small]
+		"2227REF" [label="chrI 2227 REF" width=9.4]
+		"2227REF" -> "2228G" [label=mf1small]
+		"2228G" [label="chrI 2228 G" width=1.2]
+		"2228G" -> "2322REF" [label=mf1small]
+		"2322REF" [label="chrI 2322 REF" width=1.2]
+		"2322REF" -> "2323T" [label=mf1small]
+		"2323T" [label="chrI 2323 T" width=1.2]
+		"2323T" -> "2330REF" [label=mf1small]
+		"2330REF" [label="chrI 2330 REF" width=1.2]
+		"2330REF" -> "2331C" [label="yi38small - mf1small" color=black style=dotted]
+		"2331C" [label="chrI 2331 C" width=1.2]
+		"2331C" -> "2335REF" [label=mf1small]
+		"2335REF" [label="chrI 2335 REF" width=1.6]
+		"2335REF" -> "2336TCTCC" [label=mf1small]
+		"2336TCTCC" [label="chrI 2336 TCTCC" width=1.2]
+		"2336TCTCC" -> "2352REF" [label=mf1small]
+		"2352REF" [label="chrI 2352 REF" width=1.7]
+		"2352REF" -> "2353C" [label=mf1small]
+		"2353C" [label="chrI 2353 C" width=1.2]
+		"2353C" -> "2370REF" [label=mf1small]
+		"2370REF" [label="chrI 2370 REF" width=11.6]
+		"2370REF" -> "2371A" [label=mf1small]
+		"2371A" [label="chrI 2371 A" width=1.2]
+		"2371A" -> "2487REF" [label=mf1small]
+		"2487REF" [label="chrI 2487 REF" width=2.3]
+		"2487REF" -> "2488A" [label=mf1small]
+		"2488A" [label="chrI 2488 A" width=1.2]
+		"2488A" -> "2511REF" [label=mf1small]
+		"2511REF" [label="chrI 2511 REF" width=1.2]
+		"2511REF" -> "2512G" [label="yi38small - mf1small" color=black style=dotted]
+		"2512G" [label="chrI 2512 G" width=1.2]
+		"2512G" -> "2523REF" [label=mf1small]
+		"2523REF" [label="chrI 2523 REF" width=1.7]
+		"2523REF" -> "2524C" [label="yi38small - mf1small" color=black style=dotted]
+		"2524C" [label="chrI 2524 C" width=1.2]
+		"2524C" -> "2541REF" [label=mf1small]
+		"2541REF" [label="chrI 2541 REF" width=4.5]
+		"2541REF" -> "2542G" [label="yi38small - mf1small" color=black style=dotted]
+		"2542G" [label="chrI 2542 G" width=1.2]
+		"2542G" -> "2587REF" [label=mf1small]
+		"2587REF" [label="chrI 2587 REF" width=940.8]
+		"2587REF" -> "2588T" [label="yi38small - mf1small" color=black style=dotted]
+		"2588T" [label="chrI 2588 T" width=1.2]
+		"2588T" -> "11996REF" [label=mf1small]
+		"11996REF" [label="chrI 11996 REF" width=12.1]
+		"11996REF" -> "11997A" [label=mf1small]
+		"11997A" [label="chrI 11997 A" width=1.2]
+		"11997A" -> "12118T" [label=mf1small]
+		"12119REF" [label="chrI 12119 REF"]
+		"12118T" [label="chrI 12118 T"]
+		"12118T" -> "12119REF"
+		mf1small [label=mf1small]
+		mf1small_ [label=Path]
+		mf1small -> mf1small_
+	}
+}

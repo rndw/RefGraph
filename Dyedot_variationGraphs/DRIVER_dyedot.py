@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+#Generate dependencies with pipreqs ./
+
 #Python script to generate .dot graph files of variants encoded in several vcfs.
 
 #IMPORTANT: THE ASSUMPTION IS THAT THE VCFs CONTAIN ONLY HIGH CONFIDENCE VARIANTS.
