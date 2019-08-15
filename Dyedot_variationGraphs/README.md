@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/rndw/DyeDot.svg?branch=master)](https://travis-ci.com/rndw/DyeDot)
+
 # Project is end of life
 
 # DyeDot: Variation graphs from VCF

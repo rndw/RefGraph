@@ -11,13 +11,16 @@ class RefGraphBuilder():
         self.refpath = refpath
         p = Digraph(name='REFERENCE', node_attr={'shape': 'cds', 'color': 'black', 'fillcolor': 'grey', 'fixedsize':'true'}, format='png',graph_attr={'splines': 'spline', 'rankdir': 'LR'},engine='dot',edge_attr={'arrowhead': 'vee', 'arrowsize': '0.5', 'color': 'black','penwidth':'2'})
         nw = 0
-
+        nodedata = {}
         for i in range(1, len(self.refpath) - 1):  # Has to start at one, else loopback in graph
             nw = (int(refpath[i+1][1]) - int(refpath[i][1])) / 10
             if nw < 1.2:
                 nw = 1.2
-
+            ##### Return a dictionary of node attr to work with - interactive plotting
+            nodedata[str(self.refpath[i - 1][1] + self.refpath[i - 1][2])] = ["label", str(self.refpath[i - 1][0] + ' ' + self.refpath[i - 1][1] + ' ' + self.refpath[i - 1][2]), "width", str(nw)]
+            #####
             p.node(self.refpath[i - 1][1] + self.refpath[i - 1][2],label=str(self.refpath[i - 1][0] + ' ' + self.refpath[i - 1][1] + ' ' + self.refpath[i - 1][2]), width = str(nw))
+            #### NEED TO ADD FOR EDGES AS WELL
             p.edge(self.refpath[i - 1][1] + self.refpath[i - 1][2], self.refpath[i][1] + self.refpath[i][2])
 
         p.node(self.refpath[len(self.refpath) - 1][1] + self.refpath[len(self.refpath) - 1][2],label=str(self.refpath[len(self.refpath) - 1][0] + ' ' + self.refpath[len(self.refpath) - 1][1] + ' ' + self.refpath[len(self.refpath) - 1][2]))
@@ -29,7 +32,8 @@ class RefGraphBuilder():
         p.node(str('REF_'), label=str('Path'))
         p.edge('REF', 'REF_')
 
-        return p
+        #print(nodedata)
+        return p, nodedata;
 
     def variantpath(self, output,graph,loci,refpath):
 

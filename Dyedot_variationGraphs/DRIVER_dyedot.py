@@ -80,6 +80,9 @@ if name != 'posix' and not path.endswith('\\'):
 #CONSTRUCT RANGE OBJECT
 #Default: loci = ['chrI',0,50000]
 loci = [args.c, args.b, args.e]
+
+#path = '/home/rndw/Github/RefGraph/Dyedot_variationGraphs/Small_vcfs/'
+
 #CREATE A DICTIONARY OBJECT LINKING EACH KEY TO A VCF
 dat = ReadVcfs(path).variant_builder()
 #EXIT IF THE DIR CONTAINS NO VCFs
@@ -89,7 +92,6 @@ if not dat:
 
 #UTILITY - WALL TIME. IF SSD OR FAST RAID SETUP, THREADING IMPROVES SPEED BY A FEW SECONDS. SLOWS DOWN WHEN ON MECHANICAL DSK
 start = time()
-
 #READ IN VCF FILES AS A DICT - EACH VARIANT IS A TUPLE(CHR, POS, ALT, REF) PER VCF/KEY
 ## -- Saving intermediate files in same dir as vcfs
 #Manual run : output = VarGraphCons().anchor_builder(dat)
@@ -101,7 +103,7 @@ RegionOfInterestGraph(output, loci).region()
 refpath = RegionOfInterestGraph(output, loci).referencegr()
 
 #CONSTRUCT THE REFERENCE PATH
-graph = RefGraphBuilder().referencepath(refpath)
+graph, refnodedata = RefGraphBuilder().referencepath(refpath)
 #CONSTRUCT THE VARAINT PATHS: BUILT ON TOP OF THE REFERENCE PATH
 xgraph = RefGraphBuilder().variantpath(output, graph, loci, refpath)
 
